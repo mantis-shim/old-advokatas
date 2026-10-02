@@ -1,0 +1,4 @@
+Editor:
+Kai editoriuje trinamas tekstas, jis neatsinaujina preview lange. Speju cia quill ypatybes. (jei rasomas tekstas iskart viskas atsinaujina)
+
+Straipsniai:

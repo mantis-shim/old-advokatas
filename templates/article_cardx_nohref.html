@@ -1,0 +1,11 @@
+<a class="article-cardx" href="#">
+  <div class="article-cardx-imgwrap">
+
+    <img class="article-cardx-photo" 
+      src="{% if article.photosrc %}/{{article.photosrc}}{% else %}{{ url_for('static', filename='/images/temide.jpg') }}{% endif %}">
+  </div>
+  <div class="article-cardx-text">
+    <h2>{{ article.header | safe }}</h2>
+    <p>{{ article.description | safe }}</p>
+  </div>
+</a>

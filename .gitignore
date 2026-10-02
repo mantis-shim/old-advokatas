@@ -1,0 +1,13 @@
+.vscode/
+venv/
+.venv/
+database/__pycache__/
+env/
+.env/
+.env
+env
+secret/
+.secret/
+__pycache__
+__pycache__/
+*.log

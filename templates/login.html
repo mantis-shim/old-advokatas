@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Prisijungimas{% endblock %}
+{% block extraHead %}
+<meta name="google-signin-client_id" content="{{GOOGLE_CLIENT_ID}}">
+
+{% endblock %}
+{% block content %}
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <ul>
+        {% for category, msg in messages %}
+            <li class="messages {{ category }}">{{msg}}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+  {% endwith %}
+
+
+  <div class="login">
+    <div id="g_id_onload"
+         data-client_id="{{GOOGLE_CLIENT_ID}}"
+         data-callback="handleCredentialResponse">
+    </div>
+    <div class="g_id_signin" data-type="standard"></div>
+    
+  </div>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script>
+
+function handleCredentialResponse(response) {
+  var id_token = response.credential;
+
+  fetch(window.location.origin + "/login/google", {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json', 
+    },
+    body: JSON.stringify({ id_token: id_token }),
+  })
+  .then(response => {
+    if (!response.ok) {
+      return response.json().then(err => { throw err; });
+    }
+    return response.json();
+  })
+  .then(data => {
+    if (data.user_data) {
+      alert('Sėkmingai prisijungta!'); 
+      window.location.href = '/editor';
+    } else {
+      console.error('Login Failed, ERROR:', data.error);
+      alert('Prisijungti nepavyko, KLAIDA: ' + data.error); 
+    }
+  })
+  .catch((error) => {
+    console.error('Error: ', error);
+    alert(error.error);
+  });
+}
+</script>
+{% endblock %}

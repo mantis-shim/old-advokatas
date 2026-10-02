@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}{{article.header | safe}}{% endblock %}
+{% block extraHead %}
+<meta name="description" content="{{ article.header | default('Naujas straipsnis')}}">
+<meta name="keywords" content="advokatas, teisė, teismas, straipsnis">
+<meta name="author" content="Gintautas Danišauskas">
+
+{% endblock %}
+
+{% block content %}
+    <section id="blog-page">
+        <div class="blog-info">
+            <h1>{{ article.header | safe }}</h1>
+            <p id="author">Gintautas Danišauskas&nbsp&nbsp<span id="date">&nbsp&nbsp{{ article.date | safe}}</span></p>
+        </div>
+        <div id="blog-text">
+            {{ article.content | safe }}
+        </div>
+        <br><br>
+        {% if session['admin'] == True %}
+            <a href="/editor/{{ article.id }}"><button>REDAGUOTI</button></a>
+        {% endif %}
+    </section>
+
+{% endblock %}

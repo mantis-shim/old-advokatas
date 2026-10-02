@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Straipsniai{% endblock %}
+{% block extraHead %}
+<meta name="description" content="Advokato Gintauto Danišausko straipsniai.">
+<meta name="keywords" content="straipsnis, advokatas, teismas">
+
+{% endblock %}
+
+
+{% block content %}
+<div id="page-wrapper"> 
+  <article>`
+    <div class="flexbox articles wrap">
+        {% for article in articles: %}
+          {% include 'article_cardx.html' %}
+        {% endfor %}
+      </div>
+    </div>
+  </article> 
+</div>
+
+
+
+{% endblock %}

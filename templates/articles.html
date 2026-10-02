@@ -1,0 +1,9 @@
+<div class="articles">
+  <h2>AKTUALŪS STRAIPSNIAI</h2>
+  <div class="flexbox articles">
+    {% for article in articles %}
+      {% include "article_cardx.html" %}
+    {% endfor%}
+  </div>
+  <a href="/straipsniai">Visi straipsniai</a>
+</div>

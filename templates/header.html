@@ -1,0 +1,24 @@
+  <header>
+    <div class="logo-title">
+      <a href="/">
+        <img src="{{ url_for('static', filename='images/Advokatura.jpg')}}"alt="Lietuvos advokatūros logotipas">
+        <h1 class="site-title">GINTAUTAS <span id="title-accent">DANIŠAUSKAS</span></h1>
+      </a>
+      </div>
+    <button id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav">
+      {% if session['admin'] == True %}
+        <a href="/logout" class="admin"> ATSIJUNGTI</a>
+        <a href="/editor" class="admin"> NAUJAS STRAIPSNIS</a>
+        <a href=""> </a>
+      {% endif %}
+      <a href="/">PAGRINDINIS</a>
+      <a href="/straipsniai">STRAIPSNIAI</a>
+      <a href="/#susisiekite">SUSISIEKITE</a>
+
+    </nav>
+  </header>

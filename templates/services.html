@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}Paslaugos{% endblock %}
+{% block extraHead %}
+<meta name="description" content="Advokato Gintauto Danišausko teikiamos paslaugos.">
+<meta name="keywords" content="paslaugos, advokatas, teismas">
+
+{% endblock %}
+{% block content %}
+    <div id="service-page">
+        <div  id="ikiteisminis-tyrimas" class="service-block">
+            <h1>IKITEISMINIS TYRIMAS</h1>
+            <div class="service-description">
+                <img src="{{url_for('static', filename='images/service-1.svg')}}" alt="Photo of service">
+                <p>
+                  Iš asmens imami pirmi parodymai kaip iš liudytojo ar specialaus liudytojo ir pateikiamas arba nepateikiamas jam įtarimas. Labai svarbu, kad duodant pirminius parodymus, galinčius nulemti visą ikiteisminio tyrimo eigą asmens naudai ar jo nenaudai, dalyvautų advokatas konsultuojantis savo atstovaujamąjį ar ginamąjį ir prižiūrintis ikiteisminio tyrimo veiksmų teisėtumą. Nuo ikiteisminio tyrimo proceso eigos priklauso ar teismą pasieks kaltinamasis aktas suteikiantis pagrindą teismams vykdyti teisingumą - nuteisiant ar išteisinant kaltinamąjį.
+                </p>
+            </div>
+        </div>
+        
+        <div id="pirmos-instancijos-teismas" class="service-block">
+            <h1>PIRMOS INSTANCIJOS TEISMAS</h1>
+            <div class="service-description">
+                <img src="{{url_for('static', filename='images/service-2.svg')}}" alt="Photo of service">
+                <p>
+                  Detaliai patikrina kaltinamajame akte dėstomas aplinkybes ir, ar iš tikrųjų, kaltinamas asmuo yra kaltas nusikaltimo padarymu ar, nors ir realai žalingą veiką asmuo ir padarė, tačiau dėl vienokių ar kitokių aplinkybių asmuo nėra kaltas bei yra išteisinamas. Pirmos instancijos teisme advokato veikla yra ypatingai svarbi nustatant ir pateikiant teismui aplinkybes, kurios asmenį, kurį advokatas gina teisintų. Jei advokatas atstovauja nekentėjusiajam, taip pat, jo vaidmuo yra didelis pateikiant teismui aplinkybes naudingas nukentėjusiajam, kad kaltas asmuo ne tik būtų nuteistas, bet ir atlygintų nukentėjusiajam turtinę bei neturtinę žalą atsiradusią dėl kaltininko nusikalstamos veikos.
+                </p>
+            </div>
+        </div>
+
+        <div id="apeliacines-instancijos-teismas" class="service-block">
+            <h1>APELIACINĖS INSTANCIJOS TEISMAS</h1>
+                <div class="service-description">
+                <img src="{{url_for('static', filename='images/service-3.svg')}}" alt="Photo of service">
+                <p>
+                  Apeliacinė teisminė instancija, priklausomai nuo nusikalstamos veikos sunkumo, yra Lietuvos apeliacinis teismas ir apygardos teismai, kai šie teismai nagrinėja bylas pagal skundus dėl neįsiteisėjusių pirmosios instancijos teismų nuosprendžių ir nutarčių. Apeliacinėje teismų instancijoje advokato vaidmuo, taip pat yra didžiulis. Apeliaciniame skunde advokatas nurodo, jo manymu svarbias aplinkybes į kurias pirmosios instancijos teismas neatsižvelgė ar nepakankamai atsižvelgė kvalifikuojant nagrinėjamą neteisėtą veiką, siekdamas palengvinti savo ginamojo teisinę padėtį arba atstovaujamojo teisinius interesus.
+                </p>
+            </div>
+        </div>
+
+        <div  id="kasacines-instancijos-teismas"class="service-block">
+            <h1>KASACINĖS INSTANCIJOS TEISMAS – LIETUVOS AUKŠČIAUSIASIS TEISMAS</h1>
+            <div class="service-description">
+                <img src="{{url_for('static', filename='images/service-4.svg')}}" alt="Photo of service">
+                <p>
+                  Šis teismas įrodymų iš naujo netiria bei jų nevertina. Teismas formuoja precedentinę praktiką sudėtingesniuose teisiniuose santykiuose nagrinėdamas konkrečias bylas, kuria turi vadovautis Lietuvos teismai. Advokato vaidmuo ruošiant kasaciją yra ypatingai svarbus, nes advokatas turi turėti analitinių teisės įgūdžių, sugebėti profesionaliai išanalizuoti bylos medžiagą ir kasaciniame skunde nurodyti konkrečias procesinių normų nesilaikymo aplinkybes pirmųjų instancijų teismų procesų metu, neteisingo veikos kvalifikavimo teismų baigiamuosiuose aktuose, įvardinti aiškiai neteisingai pritaikytą įstatymą.
+                </p>
+            </div>
+        </div>
+        <div id="lietuvos-konstitucinis-teismas" class="service-block">
+            <h1>LIETUVOS KONSTITUCINIS TEISMAS</h1>
+            <div class="service-description">
+                <img src="{{url_for('static', filename='images/service-5.svg')}}" alt="Photo of service">
+                <p>
+                  Sprendžia ar įstatymai ir kiti Seimo aktai neprieštarauja Lietuvos Konstitucijai, o Prezidento ir Vyriausybės aktai – neprieštarauja Konstitucijai arba įstatymams. Teismas gali pradėti Konstitucinį procesą, kai į jį kreipiasi atitinkami subjektai. Į Konstitucinį teismą turi teisę kreiptis Fiziniai ir juridiniai asmenys, jeigu jie mano, kad jų konstitucinės teisės ar laisvės yra pažeistos. Nors  į Konstitucinį teismą individualiu skundu gali kreiptis bet kuris asmuo savarankiškai, advokato vaidmuo analizuojant galimą konstitucinio teisėtumo pažeidimą, taip pat yra svarbus. Dėl to asmeniui yra paprasčiau kreiptis į Konstitucinį teismą, jei jis turi savo atstovą. 
+                </p>
+            </div>
+        </div>
+        <div id="strasburo-teismas" class="service-block">
+            <h1>EUROPOS ŽMOGAUS TEISIŲ TEISMAS (STRASBŪRO TEISMAS)</h1>
+            <div id="strasburo-teismas" class="service-description">
+                <img src="{{url_for('static', filename='images/service-6.svg')}}" alt="Photo of service">
+                <p>
+                  Nagrinėja tarpvalstybinius skundus, individualius skundus (peticijas) – pateikiamas fizinių asmenų, Nevyriausybinių organizacijų, asmenų grupių, dėl Žmogaus teisių ir pagrindinių laisvių apsaugos konvencijos pažeidimo. Pateikti peticiją, turi teisę bet koks fizinis asmuo, tačiau advokato pagalba jam garantuoja, kad peticijoje bus pateikti būtini peticijai priimti bei nagrinėti teisiniai argumentai ir asmuo įgyja daugiau galimybės, jog jo peticija bus priimta ir išnagrinėta.
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

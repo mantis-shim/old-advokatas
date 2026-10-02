@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Bebas+Neue&family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  {%block extraHead%}{% endblock%}
+</head>
+<body>
+
+  {% include "header.html" %}
+
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  {% include "footer.html" %}
+  <script src="{{url_for('static', filename='js/script-main.js')}}"></script>
+</body>
+</html>

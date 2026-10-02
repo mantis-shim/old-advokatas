@@ -1,0 +1,21 @@
+{% block blog_article %}
+
+<div class="article-card">
+
+  <div class="article-card imgwrap">
+
+    <img id="article-card-photo" 
+     src="{% if article.photosrc %}/{{article.photosrc}}
+          {% else %}{{ url_for('static', filename='images/temide.jpg') }}
+          {% endif %}">
+  </div>
+
+  <div class="article-card text">
+    <h2>{{ article.header | safe }}</h2>
+    <p class="date">{{ article.date | safe }}</p>
+    <p>{{ article.description | safe }}</p>
+    <a href="/straipsniai/{{ article.id }}">skaityti daugiau</a>
+  </div>
+</div>
+    
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Advokatas Gintautas Daniškauskas{% endblock %}
+{% block extraHead %}
+<meta name="description" content="Advokato Gintauto Danišausko paslaugos Vilniuje.">
+<meta name="keywords" content="advokatas, teismas, Vilnius, Gintautas, Danišauskas">
+<meta name="author" content="Gintautas Danišauksas">
+
+{% endblock %}
+{% block content %}
+
+{% include 'lawyer_practice_cards.html'%}
+{% include 'about.html' %}
+
+{% include 'articles.html' %}
+
+{% include 'contact.html' %}
+
+
+{% endblock %}
