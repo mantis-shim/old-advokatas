@@ -4,21 +4,19 @@
 
   <div class="photo-placeholder">
       <div class="photo-blank">
-        <img src="{{url_for('static', filename='images/portretas.jpg')}}" alt="Portretas" width="160px"/>
+        <img src="{{url_for('static', filename='images/general-img-landscape.png')}}" alt="Teisinės paslaugos"/>
       </div>
-      <p class="photo-description">Doc. Dr. advokatas Gintautas Danišauskas</p>
+      <p class="photo-description">Teisinės paslaugos</p>
   </div>
 
 
   <div class="default-textbox">
     <h1 class="padded-heading" style="text-transform:uppercase;">
-      Patirtis teikiant teisines paslaugas Lietuvos žmonėms – virš 20 metų.
+      Teisinė pagalba įvairiose teisės srityse.
     </h1>
 
     <p class=padded-text>
-      Nuo 1998 metų iki 2020 metų viešosios įstaigos „Teisinės pagalbos centras" darbuotojas bei direktorius teikiant Lietuvos žmonėms, susidūrusiems su įvairiomis teisinėmis problemomis kvalifikuotas teisines paslaugas.
-      <br>
-      2013 metais Advokatūros Advokatų tarybos sprendimu pripažintas Lietuvos advokatu ir 2018 metais aktyviai įsijungęs į praktinę veiklą advokatūros struktūroje.
+      Teikiamos konsultacijos, dokumentų rengimo ir atstovavimo paslaugos. Pagalba parenkama atsižvelgiant į situaciją ir taikomus teisės aktus.
     </p>
 
     </div>
@@ -28,38 +26,30 @@
   <div class="about-textbox-1">
     <h2 class="padded-heading">Mokslo bei profesiniai vardai</h2>
     <ul class="padded-list" alt="Profesiniai vardai">
-
       <li class="flexbox img-description">
         <div class="logo-placeholder">
-          <img src="{{url_for('static', filename='images/VU.svg')}}" alt="Vilniaus universiteto logotipas"  />
+          <img src="{{url_for('static', filename='images/VU.svg')}}" alt="Vilniaus universiteto logotipas" />
         </div>
-
         <p class="p-description">Vilniaus universiteto teisės fakulteto vienpakopės studijos - teisininko universitetinis kvalifikacinis laipsnis</p>
       </li>
-
       <li class="flexbox img-description">
-          <div class="logo-placeholder ">
-            <img src="{{url_for('static', filename='images/MRU.svg')}}" alt="Mykolo Romerio universiteto logotipas"  />
-          </div>
-          <p class="p-description">Teisės universiteto stacionarios doktorantūros studijos – Socialinių mokslų teisės krypties daktaro laipsnis</p>
+        <div class="logo-placeholder">
+          <img src="{{url_for('static', filename='images/MRU.svg')}}" alt="Mykolo Romerio universiteto logotipas" />
+        </div>
+        <p class="p-description">Teisės universiteto stacionarios doktorantūros studijos – Socialinių mokslų teisės krypties daktaro laipsnis</p>
       </li>
-
       <li class="flexbox img-description">
-        <div class="logo-placeholder ">
-          <img src="{{url_for('static', filename='images/MRU.svg')}}" alt="Mykolo Romerio universiteto logotipas"  />
+        <div class="logo-placeholder">
+          <img src="{{url_for('static', filename='images/MRU.svg')}}" alt="Mykolo Romerio universiteto logotipas" />
         </div>
         <p class="p-description">Romerio universiteto docento vardas</p>
       </li>
-
       <li class="flexbox img-description">
-
-          <div class="logo-placeholder">
-            <img src="{{url_for('static', filename='images/Advokatura.jpg')}}" alt="Lietuvos advokatūros logotipas" class="zoomed"" />
-          </div>
-          <p class="p-description">Lietuvos advokatūros advokatas, advokatūros komiteto narys</p>
-
+        <div class="logo-placeholder">
+          <img src="{{url_for('static', filename='images/Advokatura.jpg')}}" alt="Lietuvos advokatūros logotipas" class="zoomed" />
+        </div>
+        <p class="p-description">Lietuvos advokatūros advokatas, advokatūros komiteto narys</p>
       </li>
-
     </ul>
 </div>
 
@@ -70,7 +60,7 @@
   <p class="padded-text">Teisingi socialiniai santykiai, efektyvi valstybės institucijų veikla tarnaujant (teikiant paslaugas) Lietuvos žmonėms, Lietuvos teismų veikla vykdant teisingumą bei teisingumo vykdymo peripetijos.</p>
 
   <div class="padded-list">
-  <h2 class="padded-heading" style="padding-left: 0;">Informacija apie advokatą<br> Doc. Dr. Gintautą Danišauską</h2>
+  <h2 class="padded-heading" style="padding-left: 0;">Informacija apie advokatą</h2>
     <div class="blog-section-list">
       {% for article in articles_l: %}
         <div class="blog-section-list element">

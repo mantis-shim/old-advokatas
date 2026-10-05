@@ -3,7 +3,7 @@
 {% block extraHead %}
 <meta name="description" content="{{ article.header | default('Naujas straipsnis')}}">
 <meta name="keywords" content="advokatas, teisė, teismas, straipsnis">
-<meta name="author" content="Gintautas Danišauskas">
+<meta name="author" content="Redakcija">
 
 {% endblock %}
 
@@ -11,7 +11,7 @@
     <section id="blog-page">
         <div class="blog-info">
             <h1>{{ article.header | safe }}</h1>
-            <p id="author">Gintautas Danišauskas&nbsp&nbsp<span id="date">&nbsp&nbsp{{ article.date | safe}}</span></p>
+            <p id="author">Redakcija&nbsp&nbsp<span id="date">&nbsp&nbsp{{ article.date | safe}}</span></p>
         </div>
         <div id="blog-text">
             {{ article.content | safe }}

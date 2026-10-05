@@ -17,11 +17,10 @@ class Config:
     MAIL_PORT = 587
     MAIL_USE_TLS = True
     MAIL_USE_SSL = False
-    MAIL_FORM_RECIPIENTS = ['danigint2@gmail.com']
-    MAIL_USERNAME = 'fouraflow.mailer@gmail.com'
+    MAIL_FORM_RECIPIENTS = [email.strip() for email in os.getenv('MAIL_FORM_RECIPIENTS', '').split(',') if email.strip()]
+    MAIL_USERNAME = os.getenv('MAIL_USERNAME')
     MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
-    ### ADMIN_MAILS - gmail paskyros, kurios gali prisijungti prie svetaines
-    ADMIN_MAILS = ["vincentas.skolevicius@gmail.com","mantassimaitis37@gmail.com","danigint2@gmail.com"]
+    ADMIN_MAILS = [email.strip() for email in os.getenv('ADMIN_MAILS', '').split(',') if email.strip()]
     ### Client ID nera privatus ir matomas js UI, bet del tvarkos sedi .env
     GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID')
     GOOGLE_CLIENT_SECRET = os.getenv('GOOGLE_CLIENT_SECRET')
