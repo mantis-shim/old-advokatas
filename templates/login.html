@@ -17,6 +17,11 @@
 
 
   <div class="login">
+    <form method="POST" action="{{ url_for('admin') }}">
+      {{ form.hidden_tag() }}
+      {{ form.password.label }} {{ form.password() }}
+      {{ form.submit() }}
+    </form>
     <div id="g_id_onload"
          data-client_id="{{GOOGLE_CLIENT_ID}}"
          data-callback="handleCredentialResponse">

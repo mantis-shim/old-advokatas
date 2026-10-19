@@ -141,35 +141,32 @@ def editor():
 def services():
   return render_template("services.html")
 
-@app.route('/admin', methods=[ "GET"]) # Removed POST from admin
+@app.route('/admin', methods=["POST", "GET"])
 def admin():
   if session['admin']== True:
     return redirect("/")
   form=LoginForm()
 
-  # REMOVED LOGIN VIA PASSWORD ONLY GOOGLE LOGIN IS FUNCTIONAL
-
-  # if request.method == "POST" and form.validate_on_submit():
-  #   if( session['loginAttempts']>9): ### Silent Fail2ban
-  #     print("BAD LOGIN F2B active: ", session['loginAttempts'])
-  #     flash('Blogas slaptažodis.', "error")
-  #     return render_template("login.html", form=form, GOOGLE_CLIENT_ID=app.config["GOOGLE_CLIENT_ID"])
-  #   password=form.password.data
-  #   if check_password_hash(admin_password_hash, password):
-  #     session['loginAttempts']=0
-  #     session.permanent=True
-  #     session['admin']=True
-  #     flash('Sėkmingai prisijungėte!', "success")
-  #     return redirect(url_for("editor"))
-  #   else:
-  #     session['loginAttempts']+=1 ### Fail2ban
-  #     print("BAD LOGIN: ", session['loginAttempts'])
-  #     flash('Blogas slaptažodis.', "error")
-  # elif request.method=="POST":
-  #   session['loginAttempts']+=1 ### Fail2ban
-  #   flash("Blogai įvedėte duomenis", "error")
-  # return render_template("login.html", form=form, GOOGLE_CLIENT_ID=app.config["GOOGLE_CLIENT_ID"])
-  return render_template("login.html", GOOGLE_CLIENT_ID=app.config["GOOGLE_CLIENT_ID"])
+  if request.method == "POST" and form.validate_on_submit():
+    if( session['loginAttempts']>9): ### Silent Fail2ban
+      print("BAD LOGIN F2B active: ", session['loginAttempts'])
+      flash('Blogas slaptažodis.', "error")
+      return render_template("login.html", form=form, GOOGLE_CLIENT_ID=app.config["GOOGLE_CLIENT_ID"])
+    password=form.password.data
+    if check_password_hash(admin_password_hash, password):
+      session['loginAttempts']=0
+      session.permanent=True
+      session['admin']=True
+      flash('Sėkmingai prisijungėte!', "success")
+      return redirect(url_for("editor"))
+    else:
+      session['loginAttempts']+=1 ### Fail2ban
+      print("BAD LOGIN: ", session['loginAttempts'])
+      flash('Blogas slaptažodis.', "error")
+  elif request.method=="POST":
+    session['loginAttempts']+=1 ### Fail2ban
+    flash("Blogai įvedėte duomenis", "error")
+  return render_template("login.html", form=form, GOOGLE_CLIENT_ID=app.config["GOOGLE_CLIENT_ID"])
     
 @app.route("/login/google", methods=["POST"])
 def googleLogin():
