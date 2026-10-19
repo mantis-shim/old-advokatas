@@ -53,7 +53,7 @@ class ContactForm(FlaskForm):
   message=TextAreaField("* Žinutė:", validators=[DataRequired()])
   submit=SubmitField("PATEIKTI")
 
-admin_password_hash='scrypt:32768:8:1$az2qCFoP2X4gr7tm$f15f2db8311487a3d16b6f34b452ed0fe6aa6fcba8fa2ca2d9369d8a73bd94f0eaad9c31665fa8594f68d2f76514d3762ea9e97683d3bcacccfdc5a9e5364906'
+admin_password_hash=os.getenv("ADMIN_PASS_HASH")
 class LoginForm(FlaskForm):
   password=PasswordField("Slaptažodis:", validators=[DataRequired()])
   submit=SubmitField("Prisijungti")
