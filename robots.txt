@@ -2,5 +2,3 @@ User-agent: *
 Disallow: /admin/
 Disallow: /login/
 Disallow: /editor/
-
-Sitemap: https://advokatassostineje.lt/sitemap.xml
