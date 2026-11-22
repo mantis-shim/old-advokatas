@@ -20,6 +20,7 @@ class Config:
     MAIL_FORM_RECIPIENTS = [email.strip() for email in os.getenv('MAIL_FORM_RECIPIENTS', '').split(',') if email.strip()]
     MAIL_USERNAME = os.getenv('MAIL_USERNAME')
     MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
+    ADMIN_PASS_HASH = os.getenv('ADMIN_PASS_HASH')
     ADMIN_MAILS = [email.strip() for email in os.getenv('ADMIN_MAILS', '').split(',') if email.strip()]
     ### Client ID nera privatus ir matomas js UI, bet del tvarkos sedi .env
     GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID')
